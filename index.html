@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF=8">
+	<title> Prediction page</title>
+	
+    <link rel="shortcut icon" type="x-icon" href="https://i.ibb.co/VH7qsyW/Google-Chrome-icon-February-2022-svg.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta:wght@300&family=Poppins:wght@300;400&family=Raleway&display=swap" rel="stylesheet">
+   </head>
+   <style>
+        
+
+		* {
+			border-collapse: separate;
+		}
+
+		.main {
+			
+			top: 130px;
+			width: 500px;
+			background-color:#659EC7;
+			border-radius: 15px;
+			align-items: center;
+			height: max-content;
+            color:white;
+			padding:10px;
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+padding: 15px;
+
+		}
+
+		h1 {
+			
+			margin: 20px, 0;
+			color: rgb(18, 17, 17);
+			font-size: 30px;
+			font-weight: lighter;
+			animation-delay: 3.5s;
+			font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+		}
+
+		input[type=submit] {
+			background-color:white;
+			border: 1px solid black;
+			color: blue;
+			padding: 10px 16px;
+			cursor: pointer;
+			margin-top: 15px;
+			border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+		}
+
+		input {
+			padding: 20px, 0;
+			margin: 20px, 0;
+		}
+
+	
+		p {
+			color: #ffffff;
+		}
+
+		.row em {
+			color: red;
+			font-weight: bolder;
+			font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+		}
+
+		.main .bold {
+			font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+		}
+
+		.wrapper .predict {
+			font-weight: bold;
+           float: left;
+		}
+
+		.logo .title {
+			font-size: 20px;
+			
+
+		}
+
+	
+
+		.bold {
+			font-size: 17px;
+            padding:10px;
+			font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+		}
+
+        .sample{
+            margin-top: 130px;
+           
+           
+        }
+       .main{
+        margin-top:130px ;
+		align-items: center;
+		text-align: center;
+       }
+
+
+	.mainthing{
+		display: -webkit-inline-box;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+       .title{
+        font-family: 'Montserrat', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-size: 20px;
+       }
+
+	   h4{
+		font-size: 18px;
+	   }
+	</style>
+
+
+<body>
+   
+<div class="mainthing">
+
+	<div class="sample" style="border: solid;border-color: #659EC7;width:300px;border-radius: 25px;padding: 10px;
+    height: 280px;">
+	
+				
+                <h3 style=" font-family: 'Montserrat', sans-serif;
+                font-family: 'Mukta', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;">Notes:</h3>
+
+                <h3 style=" font-family: 'Montserrat', sans-serif;
+                font-family: 'Mukta', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;">Streams</h3>
+				<span class="title"> Electrical And Communication: 0</span><br>
+				<span class="title"> Computer Science: 1</span><br>
+				<span class="title"> Information Technology: 2</span><br>
+				<span class="title"> Mechanical: 3</span><br>
+				<span class="title"> Electrical: 4</span><br>
+				<span class="title"> Civil: 5</span><br> </br> <br>
+			
+               
+			</div>
+		
+		<div class="main">
+			<center>
+				<table>
+					<form action="{{ url_for("predict")}}" method="post">
+					<form action="result">
+					<tr>
+						<td align="right"><span class="bold">Stream:</span></td>
+						<td align="left"><input type="text" name="Stream"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">Internships:</span></td>
+						<td align="left"><input type="text" name="Internships"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">CGPA:</span></td>
+						<td align="left"><input type="text" name="CGPA"></td>
+					</tr>
+                    <tr>
+						<td align="right"><span class="bold">Programming skills:</span></td>
+						<td align="left"><input type="text" name="Programming skills"></td>
+					</tr>
+					
+					<tr>
+						<td align="right"><span class="bold">History Of Backlog:</span></td>
+						<td align="left"><input type="text" name="Histroy of Backlog"></td>
+					</tr>
+                    <tr>
+						<td align="right"><span class="bold">Communication skills:</span></td>
+						<td align="left"><input type="text" name="Communication skills"></td>
+					</tr>
+					<tr>
+						<td align="right"><span class="bold">Aptitude skills:</span></td>
+						<td align="left"><input type="text" name="Aptitude skills"></td>
+					</tr>
+				
+					
+					<tr>
+						<td><h4>Choose your most <br> skilled area </h4></td>
+					<br>
+					<td><input type="checkbox" value="1" id="cb" name="C++" onclick="isChecked()">
+					<label for="C++">C++</label>
+
+					<input type="checkbox" value="1" id="cb" name="java" onclick="isChecked()">
+						<label for="java">JAVA</label>
+
+						<input type="checkbox" value="1" id="cb" name="C" onclick="isChecked()">
+							<label for="C">C</label>
+
+							<input type="checkbox" value="1" id="cb" name="python" onclick="isChecked()">
+								<label for="python">Python</label>
+									<br><br>
+								<input type="checkbox" value="1" id="cb" name="ds" onclick="isChecked()">
+								<label for="ds">Machine learning</label>
+
+								<input type="checkbox" value="1" id="cb" name="ds" onclick="isChecked()">
+								<label for="ds">Full Stack</label>
+								<br><br>
+								<input type="checkbox" value="1" id="cb" name="ds" onclick="isChecked()">
+								<label for="ds">Networking</label>
+
+								<input type="checkbox" value="1" id="cb" name="ds" onclick="isChecked()">
+								<label for="ds">Cyber Security</label>
+								<br><br>
+								<input type="checkbox" value="1" id="cb" name="ds" onclick="isChecked()">
+								<label for="ds">Robotics</label>
+
+								<input type="checkbox" value="1" id="cb" name="ds" onclick="isChecked()">
+								<label for="ds">IOT</label>
+
+								<input type="checkbox" value="1" id="cb" name="ds" onclick="isChecked()">
+								<label for="ds">Data Science</label></td>
+					</tr>
+
+				</table>
+               
+               
+				<br>
+				<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+				{{ prediction_text }}
+				</input>
+			</form>
+         </center>  
+     </div>
+  
+
+    
+		</div>
+		
+		<center>
+			<div class="row">
+				<h2><em>{{result2}}</em></h2>
+			</div>
+			
+		</center>
+		<script>
+			function isChecked() {
+  var checkBox = document.getElementById("cb");
+  if (checkBox.checked == true){
+    return 1;
+  } else {
+    return 0;
+  }
+}
+		
+		</script>
+</body>
+</html>
